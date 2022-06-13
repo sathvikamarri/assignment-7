@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment-7 : Papoullis Chapter 9} 
+\author{Sathvika marri - Ai21btech11020}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{amsmath}
+\usepackage{romannum}
+\usepackage{enumitem}
+\setbeamertemplate{caption}[numbered]{}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Problem 9.52}
+        Given a random variable $\omega$ with density f($\omega$) such that f($\omega$) = 0 for $|{\omega}|$ $>$ n, we form the process x[n] = Ae^{jn\omega}$\pi$. Show that S_{$\omega$} = 2$\pi$A^2f($\omega$) for $|\omega|$ $<$ $\pi$.
+
+\end{block}
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+    \begin{block}{Solution:-}
+    if x[n] = Ae^{jn\omega T} $then$,\\ \vspace{0.25cm}
+    R_x [m] = A^2 E[e^{j(m+n)\omega T_e - jn\omega T}] \\ \vspace{0.25cm}
+    \implies A^2 $\int_{-\sigma}^{\sigma} e^{jn\omega T} f(\omega) d\omega$ \\ \vspace{0.25cm} 
+    But from S(e^{jw}) = R[O] +2 $\sum_{m=0}^{\infty} R[m] cos m\omega$ \\ \vspace{0.25cm}
+    R[m] = $\frac{1}{2\sigma}$ $\int_{\sigma}^{\sigma} S_x (\omega) e^{jn \omega T} d\omega$ \\ \vspace{0.25cm}
+  \centering {\boxed{Hence, A^2 f(\omega) = S_x (\omega)/ 2\sigma }}
+    
+    \end{block}
+    
+\end{frame}
+
+\end{document}
